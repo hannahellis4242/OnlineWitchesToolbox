@@ -2,7 +2,7 @@ import seedrandom, { PRNG } from "seedrandom";
 import Config from "./Config";
 import Point from "../Curve/Point";
 import Size from "./Size";
-import { Cubic, Quadratic } from "./CurveType";
+import { CubicType, QuadraticType } from "./CurveType";
 
 const randBetween =
   (rng: PRNG) =>
@@ -25,13 +25,13 @@ const randArrow =
   };
 
 export interface QuadraticPoints {
-  curve: Quadratic;
+  curve: QuadraticType;
   points: Point[];
   gradient: Point;
 }
 
 export interface CubicPoints {
-  curve: Cubic;
+  curve: CubicType;
   points: [Point, Point][];
 }
 
