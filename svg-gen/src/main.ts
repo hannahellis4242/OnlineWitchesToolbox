@@ -4,6 +4,8 @@ import quadratic from "./Curve/quadratic";
 import Point, { point } from "./Curve/Point";
 import draw from "./Curve/draw";
 import cubic from "./Curve/cubic";
+import Config from "./Generate/Config";
+import generate from "./Generate/generate";
 //quadratic
 {
   const points = [
@@ -48,4 +50,24 @@ import cubic from "./Curve/cubic";
       generator: () => cubic(points),
     })
   );
+}
+//random quad
+{
+  const config: Config = {
+    size: { width: 250, height: 250 },
+    seed: "A big bag of",
+    curveType: "quadratic",
+    numberOfPoints: 7,
+  };
+  writeFile(join(__dirname, "..", "rand-quad.svg"), generate(config));
+}
+//random cubic
+{
+  const config: Config = {
+    size: { width: 250, height: 250 },
+    seed: "A big bag of",
+    curveType: "cubic",
+    numberOfPoints: 7,
+  };
+  writeFile(join(__dirname, "..", "rand-cubic.svg"), generate(config));
 }
