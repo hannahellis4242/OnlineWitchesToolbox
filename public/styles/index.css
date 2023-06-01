@@ -1,6 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c010d;
+  color: #ac11b7;
+}
+
 /* Style the navigation bar */
 nav {
-  background-color: #f2f2f2;
+  background-color: #68389b;
+  margin: 0;
+  padding: 5px;
 }
 
 nav ul {
@@ -12,6 +21,9 @@ nav ul {
 nav ul li {
   display: inline-block;
 }
+nav ul :hover {
+  background-color: white;
+}
 
 /* Style the dropdown button */
 .dropdown .dropbtn {
@@ -19,10 +31,13 @@ nav ul li {
   font-size: 16px;
   border: none;
   outline: none;
-  color: black;
   background-color: inherit;
   padding: 12px 16px;
   margin: 0;
+}
+
+.dropdown .dropbtn :hover {
+  background-color: #0c010d;
 }
 
 /* Style the dropdown content (hidden by default) */
@@ -53,14 +68,9 @@ nav ul li {
   display: block;
 }
 
-header.hero {
+header img {
   background-image: url("/img/hero.png");
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
-  text-align: center;
-  font-size: xx-large;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  width: 100%;
 }
