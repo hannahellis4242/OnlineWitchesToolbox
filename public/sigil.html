@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>OWT</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Divination</a>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Spellcraft</a>
+          <div class="dropdown-content">
+            <a href="#">Link 4</a>
+            <a href="#">Link 5</a>
+            <a href="#">Link 6</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Size</legend>
+          <label for="width">Width:</label>
+          <input type="range" id="width" name="width" min="1" max="100" />
+          <input type="number" id="widthBox" name="width" min="1" max="100" />
+
+          <label for="height">hieght:</label>
+          <input type="range" id="height" name="height" min="0" max="100" />
+          <input type="number" id="heightBox" name="height" min="0" max="100" />
+
+          <input type="checkbox" id="square" name="square" />
+          <label for="square">Make Square</label>
+        </fieldset>
+        <fieldset>
+          <legend>Complexity</legend>
+          <label for="complexity">Complexity:</label>
+          <input
+            type="range"
+            id="complexity"
+            name="complexity"
+            min="2"
+            max="50"
+          />
+          <input
+            type="number"
+            id="complexityBox"
+            name="complexity"
+            min="2"
+            max="50"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Type</legend>
+          <label for="curvetype">
+            <input
+              type="radio"
+              id="curve-type-quadratic"
+              name="radioOption"
+              value="quadratic"
+            />
+            Quadratic
+          </label>
+
+          <label for="curvetype">
+            <input
+              type="radio"
+              id="curve-type-cubic"
+              name="radioOption"
+              value="cubic"
+            />
+            Cubic
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sigil Phase or Word</legend>
+          <label for="seed">Phrase:</label>
+          <input type="text" id="seed" name="seed" />
+        </fieldset>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </main>
+    <footer>About this page</footer>
+  </body>
+</html>
